@@ -3,16 +3,23 @@
     text-align: center;
     font-family: system-ui;
     margin-top:12rem;
+    height: 27rem;
 }
 
 @media screen and (max-width: 900px) {
-   .home-intro{}
+   .home-intro{
+    color:black;
+    text-align: center;
+    font-family: system-ui;
+    margin-top:12rem;
+    height: 27rem;
+   }
 }
 
 @media screen and (max-width: 1150px) {
     .home-intro{
         font-size: 1.2rem;
-        margin-top: 10rem;
+        margin-top: 12rem;
         
     }
 }

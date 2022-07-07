@@ -2,39 +2,33 @@ import React from 'react'
 import './NavBar.css'
 import { FaBars } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
-const NavBar= () =>{
-const [toggleMenu, setToggleMenu] = React.useState(false);
-return (
-  <nav className='web_navbar'>
-    <div className='title'>
-      <h1>Search Interest</h1>
+import 'bootstrap/dist/css/bootstrap.min.css';
+const NavBar= () =>(
+ <nav className="navbar navbar-expand-lg">
+  <div className="container-fluid">
+    <a className="navbar-brand col-lg-7" href="#">Search Interest</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse cd" id="navbarNav">
+      <ul className="navbar-nav col-lg">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">About</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Service</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <a className="nav-item nav-link adjust" href="">Log in</a>
     </div>
-    <ul className='app_navbar-links'>
-      <li className='heading'><a className='heading' href='#'>Home</a></li>
-      <li className='heading'><a className='heading' href='#'>About</a></li>
-      <li className='heading'><a className='heading' href='#'>Service</a></li>
-      <li className='heading'><a className='heading' href='#'>contact</a></li>
-    </ul>
-    <div>
-      <a href="#login"className='app_login heading'>Log in</a>
-    </div>
-    <div className="app__navbar-smallscreen">
-        <FaBars onClick={() => setToggleMenu(true)} />
-        {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom ">
-              <IoIosClose className="overlay__close" onClick={() => setToggleMenu(false)} />
-            <ul className="app__navbar-smallscreen_links">
-              <li><a className='heading1' href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
-              <li><a className='heading1' href="#about" onClick={() => setToggleMenu(false)}>About</a></li>
-              <li><a className='heading1' href="#menu" onClick={() => setToggleMenu(false)}>Service</a></li>
-              <li><a className='heading1' href="#awards" onClick={() => setToggleMenu(false)}>contact</a></li>
-              <li><a className='heading1' href="#awards" onClick={() => setToggleMenu(false)}>Log in</a></li>
-            </ul>
-          </div>
-        )}
-      </div>
-  </nav>
+  </div>
+</nav>
 );
-};
 
 export default NavBar

@@ -1,7 +1,10 @@
 from django.contrib import admin
 
-from .models import Bank
+from .models import Bank, Person, FixedDeposit, SavingAcc, SalaryAcc
 
-from .models import Person
+
 admin.site.register(Bank)
 admin.site.register(Person)
+admin.site.register(FixedDeposit)
+admin.site.register(SavingAcc)
+admin.site.register(SalaryAcc)

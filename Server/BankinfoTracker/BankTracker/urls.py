@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from banks import views
+from banks.views import GetBank, getbank
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signIn/', views.signIn),
+    path('postsignIn/', views.postsignIn),
+    path('bank/<int:pk>/', getbank.as_view()),
+    path('banks/', GetBank.as_view(), name='listcreate'),
 ]

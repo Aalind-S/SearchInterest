@@ -1,4 +1,56 @@
+.name{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 20px;
+}
+
+/* logo */
+.logo{
+    background: rgba(42, 65, 87, 0.24);
+border-radius: 2px;
+}
+
+.navbar-nav .nav-link {
+    color:  #929ECC;
+}
+
 .adjust{
     position: relative;
-    right: 1rem;
+    margin-left: 26rem;
+    background: white;
+    border-radius: 2px;
+    
 }
+.design{
+    padding:0rem 2rem ;
+    margin-top: 0.6rem;
+}
+
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+    .adjust{
+        position: relative;
+        right: 0rem;
+    }
+    .design{
+        padding:2rem 4rem ;
+        margin-top: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .adjust{
+        position: absolute;
+        margin:0;
+    }
+    .design{
+        padding:0rem 0rem ;
+        margin-top: 1rem;
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+    }
+  }

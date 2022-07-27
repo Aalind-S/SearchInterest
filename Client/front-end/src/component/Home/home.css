@@ -3,30 +3,91 @@
     text-align: center;
     font-family: system-ui;
     margin-top:12rem;
-    height: 27rem;
+    height: 26.2rem;
+    transition:  0.2s ease,
+    padding 0.8s linear;
 }
 
-@media screen and (max-width: 900px) {
-   .home-intro{
-    color:black;
-    text-align: center;
-    font-family: system-ui;
-    margin-top:12rem;
-    height: 27rem;
-   }
+.elli{
+    position: absolute;
+    width:35%;
+    left: 28rem;
+    top:30rem;
+    z-index:0;
 }
 
-@media screen and (max-width: 1150px) {
-    .home-intro{
-        font-size: 1.2rem;
-        margin-top: 12rem;
-        
+.logo2{
+    position: absolute;
+    width:50%;
+    left: 25rem;
+    top:25.3rem;
+    z-index: 1;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    /* Styles */
+    .elli{
+        position: absolute;
+        width:80%;
+        left: 2rem;
+        top:34.1rem;
+        z-index: 1;
     }
-}
-
-@media screen and (max-width: 650px) {
-    .home-intro{
-        font-size: 0.7rem;
-        margin-top: 7rem;
+    
+    .logo2{
+        position: absolute;
+        width:100%;
+        left: 0.5rem;
+        top:32.5rem;
     }
-}
+  }
+
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    /* Styles */
+    .elli{
+        position: absolute;
+        width:80%;
+        left: 5rem;
+        top:37.8rem;
+    }
+    
+    .logo2{
+        position: absolute;
+        width:100%;
+        left: 0rem;
+        top:34.4rem;
+    }
+  }
+
+  @media only screen and (min-device-width: 540px) and (max-device-width: 767px) {
+    .elli{
+        position: absolute;
+        width:80%;
+        left: 4rem;
+        top:33.1rem;
+    }
+    
+    .logo2{
+        position: absolute;
+        width:100%;
+        left: 2rem;
+        top:30.9rem;
+    }
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+    .elli{
+        position: absolute;
+        width:45%;
+        left: 16rem;
+        top:23.1rem;
+    }
+    
+    .logo2{
+        position: absolute;
+        width:50%;
+        left: 16rem;
+        top:22.2rem;
+    }
+  }  

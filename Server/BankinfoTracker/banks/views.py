@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from .models import Person, Bank
 import pyrebase
-#from django.views.decorators.csrf import csrf_exempt
+# from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializer import BankSerializer, PersonSerializer
 from rest_framework import generics
+from rest_framework.views import APIView
+
 
 config = {
 
@@ -127,3 +129,13 @@ class getbank(generics.RetrieveAPIView):
 
 
 class bankdetail(APIView):
+    def get_object(self, pk, format=None):
+        try:
+            return Bank.objects.get(pk=pk)
+        except Bank.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        bank = self.get_object(pk)
+        serializer = BankSerializer(bank)
+        return Response(serializer.data)

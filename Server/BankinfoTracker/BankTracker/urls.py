@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from banks import views
-from banks.views import GetBank, getbank
+from banks.views import GetBank, getbank, bankdetail
 
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('postsignIn/', views.postsignIn),
     path('bank/<int:pk>/', getbank.as_view()),
     path('banks/', GetBank.as_view(), name='listcreate'),
+    path('testapi/<int:pk>', bankdetail.as_view(), name='test'),
 ]

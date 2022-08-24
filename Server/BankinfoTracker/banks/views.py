@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from .serializer import BankSerializer, PersonSerializer
 from rest_framework import generics
 from rest_framework.views import APIView
-
+from rest_framework import filters  # search function
 
 config = {
 
@@ -139,3 +139,10 @@ class bankdetail(APIView):
         bank = self.get_object(pk)
         serializer = BankSerializer(bank)
         return Response(serializer.data)
+
+
+class SearchParameter(generics.ListCreateAPIView):
+    search_fields = ['bank_name']
+    filter_backends = (filters.SearchFilter,)
+    queryset = Bank.objects.all()
+    serializer_class = BankSerializer
